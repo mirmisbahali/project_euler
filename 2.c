@@ -1,28 +1,24 @@
 //By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
 
-#include<stdio.h>
+#include <stdio.h>
 
 
 int main(void)
 {
-    int sum = 0, present=1;
+    int t1 = 0, t2 = 1, next = 0, n=4000000, sum=0;
 
-    for (int i = 1; i < 10; i++)
+    while (next <= n)
     {
-        if (i>=2)
+        if (next % 2 == 0)
         {
-            present += i;
+            sum += next;
         }
-        printf("%d\n", present);
+        next = t1 + t2;
+        t1 = t2;
+        t2 = next;
     }
+    printf("Sum = %d\n", sum);
+    
 
-    return 1;
+    return 0;
 }
-
-/*
-1, 1
-2, 3
-3, 6
-4, 10
-
-*/
