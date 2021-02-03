@@ -4,7 +4,6 @@ A palindromic number reads the same both ways. The largest palindrome made from 
 Find the largest palindrome made from the product of two 3-digit numbers.
 '''
 import time
-start = time.time()
 largest_palindrome = 0
 
 for i in reversed(range(100, 1000)):
@@ -17,5 +16,3 @@ for i in reversed(range(100, 1000)):
 
 
 print(largest_palindrome)
-
-print(time.time() - start)
